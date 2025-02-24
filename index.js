@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const app = express()
 
 app.use(cors());
-
+app.use(express.static('dist'))
 app.use((req,res,next) => {
     const now = new Date();
     const formattedDate = now.toLocaleString('en-US', { 
